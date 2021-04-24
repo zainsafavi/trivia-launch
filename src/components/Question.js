@@ -5,8 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 function Question () {
 
   
-
-    console.log("hi");
   
     const[ref, setRef] = useState(React.useRef(new Array()));
     const[ref2, setRef2] = useState(React.useRef(new Array()));
@@ -33,7 +31,7 @@ function Question () {
         };
       });
 
-      console.log(_data);
+      
       setData(_data.results);
   
     },[]);
@@ -41,11 +39,9 @@ function Question () {
     const checkAnswer = (correct, given,i, j) => {
       //console.log(correct.correct_answer);
       
-      console.log(ref.current[i]);
-      console.log(temp);
+      
       var temp = ref.current[i].length;
-        console.log(ref.current[i].length);
-        console.log(ref.current[i][0]);
+       
         for(var j = 0 ; j < temp ; j++){
           ref.current[i][j].setAttribute("disabled",true);
         }
